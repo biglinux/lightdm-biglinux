@@ -1,0 +1,14 @@
+#!/bin/sh
+set -e
+package_name=lightdm-biglinux
+case "$1" in
+  remove)
+    dpkg-divert --package "$package_name" --rename --remove "/etc/lightdm/lightdm.conf"
+    dpkg-divert --package "$package_name" --rename --remove "/etc/lightdm/lightdm-gtk-greeter.conf"
+    ;;
+  purge)
+    dpkg-divert --package "$package_name" --rename --remove "/etc/lightdm/lightdm.conf"
+    dpkg-divert --package "$package_name" --rename --remove "/etc/lightdm/lightdm-gtk-greeter.conf"
+;;
+esac
+exit 0

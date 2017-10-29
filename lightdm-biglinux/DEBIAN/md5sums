@@ -1,0 +1,11 @@
+7186f6dd90dfd14b060e865b9faf8d55  DEBIAN/control
+d41d8cd98f00b204e9800998ecf8427e  DEBIAN/md5sums
+a8a3482377e4060584c2637ae80d0bb4  DEBIAN/dpkg-divert
+a6015eaab9e118b32c96926ec8061bed  DEBIAN/postrm
+82eb5db6cc8d072ededc1b17e43e1aa1  DEBIAN/preinst
+f3eb27222ee17ab1d7c8f4692825eea4  usr/bin/touchpadTapEnable
+99bbd32deccb6661988c3ebbede4cbe7  usr/share/icons/hicolor/scalable/places/cinnamon_badge-symbolic.svg
+fc56c8b5273550a080acfd2eb75b9f23  usr/share/icons/hicolor/scalable/places/deepin_badge-symbolic.svg
+e07f17bb5c0f4eb5b8d0755687738e16  usr/share/lightdm/lightdm.conf.d/50-enable-tap-touchpad.conf
+28a9924965cbfd2ac0f30718db69fb8d  etc/lightdm/lightdm.conf
+585cf794b62d3c2b25b756e51c4a3f05  etc/lightdm/lightdm-gtk-greeter.conf

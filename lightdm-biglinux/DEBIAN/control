@@ -1,0 +1,11 @@
+Package: lightdm-biglinux
+Version: 1.0.2-1big5
+Depends: lightdm-gtk-greeter, lightdm-gtk-greeter-settings, adapta-gtk-theme, xinput, biglinux-wallpapers
+Architecture: all
+Maintainer: Bruno Goncalves <www.biglinux.com.br>
+Section: admin
+Priority: optional
+Installed-Size:100
+Description: Configure lightdm in biglinux
+
+

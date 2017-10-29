@@ -1,0 +1,8 @@
+exec 3>&2
+
+inputDevice="$(xinput | grep -i TouchPad | sed 's|.*id=||g' | cut -f1)"
+touchpadId=$(xinput --list-props $inputDevice | grep -i 'Tapping Enabled (' | sed 's|.*(||g;s|).*||g')
+
+xinput --set-prop $inputDevice $touchpadId 1 2> /dev/null
+
+exec 2>&3

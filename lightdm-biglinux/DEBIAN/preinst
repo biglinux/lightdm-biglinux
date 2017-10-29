@@ -1,0 +1,21 @@
+#!/bin/sh
+set -e
+package_name=lightdm-biglinux
+mkdir -p "/usr/share/dpkgdivert/lightdm-biglinux"
+case "$1" in
+  install)
+    dpkg-divert --package "$package_name" --divert "/usr/share/dpkgdivert/lightdm-biglinux/etclightdmlightdm.conf" --rename "/etc/lightdm/lightdm.conf"
+    dpkg-divert --package "$package_name" --divert "/usr/share/dpkgdivert/lightdm-biglinux/etclightdmlightdm-gtk-greeter.conf" --rename "/etc/lightdm/lightdm-gtk-greeter.conf"
+    ;;
+  upgrade)
+if [ "$(dpkg-divert --list "/etc/lightdm/lightdm.conf")" = "" ]
+then
+    dpkg-divert --package "$package_name" --divert "/usr/share/dpkgdivert/lightdm-biglinux/etclightdmlightdm.conf" --rename "/etc/lightdm/lightdm.conf"
+fi
+if [ "$(dpkg-divert --list "/etc/lightdm/lightdm-gtk-greeter.conf")" = "" ]
+then
+    dpkg-divert --package "$package_name" --divert "/usr/share/dpkgdivert/lightdm-biglinux/etclightdmlightdm-gtk-greeter.conf" --rename "/etc/lightdm/lightdm-gtk-greeter.conf"
+fi
+;;
+esac
+exit 0
